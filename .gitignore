@@ -1,0 +1,4 @@
+#Files to be ignore by git
+src/bin
+src/obj
+src/app

@@ -1,0 +1,5 @@
+#In order to make the image as small as possible 
+#we aren't going to copy this file 
+
+bin\
+obj\

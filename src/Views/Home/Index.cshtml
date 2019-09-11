@@ -1,0 +1,57 @@
+﻿@model src.Models.Home.IndexViewModel
+
+@{
+    ViewData["Title"] = "ASP.NET Core & Docker";
+}
+
+@section Styles {
+    <link href="~/css/Home/index.css" rel="stylesheet" type="text/css">
+}
+
+<div class="alert alert-info">
+    <span>@Model.Date.DayOfWeek, @Model.Date.ToString("dd/MM/yyyy HH:mm") </span>
+    <span>Your Ip Address is: @Model.Ip</span>
+</div>
+
+<div class="mx-auto">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a asp-controller="Home" asp-action="AspNet">
+                    <img src="~/images/netcore.png" alt="net core">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a asp-controller="Home" asp-action="Docker">
+                    <img src="~/images/dockerbanner.png" alt="docker">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a asp-controller="Home" asp-action="DockerNet">
+                    <img src="~/images/dockernet.jpeg" alt="docker and net core">
+                </a>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev text-dark" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next text-dark" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Hello everyone, this is a simple Web App made with ASP.NET Core running in a container using Docker.
+       If you want to learn about it, this is a <a>beginner's guide</a> that you can follow. 
+    </p>
+</div>
+
